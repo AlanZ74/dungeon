@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="410dp"
+        android:layout_height="723dp"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp">
+
+        <EditText
+            android:id="@+id/charName"
+            android:layout_width="wrap_content"
+            android:layout_height="64dp"
+            android:layout_marginStart="87dp"
+            android:layout_marginTop="82dp"
+            android:ems="10"
+            android:inputType="text"
+            android:text="Name Here" />
+
+        <TextView
+            android:id="@+id/difficulty_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick a Difficulty"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <RadioGroup
+            android:id="@+id/difficulty_group"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/easy"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Easy" />
+
+            <RadioButton
+                android:id="@+id/medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Medium" />
+
+            <RadioButton
+                android:id="@+id/hard"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Hard" />
+
+        </RadioGroup>
+
+        <TextView
+            android:id="@+id/character_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pick a Character"
+            android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="163dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/imageView10"
+                android:layout_width="183dp"
+                android:layout_height="141dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/pika"
+                tools:srcCompat="@drawable/pika" />
+
+            <ImageView
+                android:id="@+id/imageView11"
+                android:layout_width="wrap_content"
+                android:layout_height="158dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/link"
+                tools:srcCompat="@drawable/link" />
+
+            <ImageView
+                android:id="@+id/imageView12"
+                android:layout_width="wrap_content"
+                android:layout_height="159dp"
+                android:layout_weight="1"
+                app:srcCompat="@drawable/ike"
+                tools:srcCompat="@drawable/ike" />
+
+        </LinearLayout>
+
+        <RadioGroup
+            android:id="@+id/character_group"
+            android:layout_width="match_parent"
+            android:layout_height="92dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/pikachu_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Pikachu" />
+
+            <RadioButton
+                android:id="@+id/link_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Link" />
+
+            <RadioButton
+                android:id="@+id/ike_select"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Ike" />
+
+        </RadioGroup>
+
+        <Button
+            android:id="@+id/continueButton"
+            android:layout_width="106dp"
+            android:layout_height="48dp"
+            android:layout_marginStart="152dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="153dp"
+            android:layout_marginBottom="52dp"
+            android:text="Continue" />
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

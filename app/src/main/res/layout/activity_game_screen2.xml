@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/relativeLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background_color"
+    tools:context=".GameScreen2">
+
+    <!-- Background Tile ImageView -->
+    <ImageView
+        android:id="@+id/backgroundTileImageView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/t2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Player Name TextView -->
+    <TextView
+        android:id="@+id/playerNameTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Player: "
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Character Sprite ImageView below Player Name -->
+    <ImageView
+        android:id="@+id/characterSpriteImageView"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:layout_marginTop="32dp"
+        android:contentDescription="@string/character_sprite"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/playerNameTextView"
+        app:srcCompat="@drawable/pika" />
+
+    <ImageView
+        android:id="@+id/sword"
+        android:layout_width="72dp"
+        android:layout_height="100dp"
+        android:visibility="invisible"
+        app:srcCompat="@drawable/bomb"
+        app:layout_constraintStart_toEndOf="@id/characterSpriteImageView"
+        app:layout_constraintTop_toTopOf="@id/characterSpriteImageView"
+        app:layout_constraintBottom_toBottomOf="@id/characterSpriteImageView" />
+
+
+    <!-- Health Points TextView below Character Sprite -->
+    <TextView
+        android:id="@+id/healthPointsTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Health Points: "
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/characterSpriteImageView" />
+
+    <!-- Score TextView below Health Points -->
+    <TextView
+        android:id="@+id/scoreTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="Score: "
+        android:textColor="#FFFFFF"
+        android:textSize="20sp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/healthPointsTextView" />
+
+    <!-- Game area where enemies will move -->
+
+    <!-- Goal Block at the bottom -->
+
+    <RelativeLayout
+        android:id="@+id/gameLayout"
+        android:layout_width="410dp"
+        android:layout_height="498dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/characterSpriteImageView"
+        app:layout_constraintVertical_bias="0.983">
+        <!-- Dynamic game elements like enemies will be added here in code -->
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/goalBlock2"
+        android:layout_width="87dp"
+        android:layout_height="86dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:srcCompat="@android:drawable/alert_dark_frame" />
+
+    <ImageView
+        android:id="@+id/timefreezePowerUp"
+        android:layout_width="83dp"
+        android:layout_height="80dp"
+        app:srcCompat="@drawable/pngfind_com_beachball_png_2482010"
+        tools:layout_editor_absoluteX="10dp"
+        tools:layout_editor_absoluteY="10dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
